@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Project - Telecom Churn Prediction</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        background: #f4f6f9;
+        color: #444;
+        padding-top: 80px;
+      }
+
+      .navbar {
+        width: 100%;
+        background-color: #007bff;
+        padding: 14px 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+      }
+
+      .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        color: #e2e2e2;
+      }
+
+      .section {
+        margin: 40px auto;
+        padding: 20px;
+        max-width: 1200px;
+      }
+
+      .section p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #444;
+      }
+
+      h2 {
+        font-size: 28px;
+        color: #2c3e50;
+        margin-bottom: 15px;
+        font-weight: 700;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      ul li {
+        font-size: 18px;
+        margin: 10px 0;
+        color: #555;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f1f1f1;
+        color: #777;
+        font-size: 14px;
+        border-top: 1px solid #ddd;
+      }
+
+      @media (max-width: 600px) {
+        .nav-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        .section {
+          padding: 15px;
+        }
+
+        .navbar-container {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <span class="logo">Customer Churn Predict</span>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/analysis">Analysis</a></li>
+          <li><a href="/about">About Project</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <section class="section">
+        <h2>📌 About the Project</h2>
+        <p>
+          Customer churn — the phenomenon where users stop using a service — is
+          a major concern in the telecom industry. Retaining existing customers
+          is far more cost-effective than acquiring new ones. Our project
+          proactively addresses this issue by leveraging machine learning to
+          identify at-risk customers and support targeted retention strategies.
+        </p>
+        <p>
+          We've developed a predictive system capable of recognizing patterns in
+          historical customer behavior to forecast churn. This enables telecom
+          providers to take timely and strategic actions — such as offering
+          personalized support or incentives — to improve customer retention and
+          satisfaction. Our approach centers on supervised machine learning
+          algorithms trained on real-world telecom datasets.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>🛠️ Our Pipeline Includes</h2>
+        <ul>
+          <li>Comprehensive data preprocessing and cleaning</li>
+          <li>In-depth Exploratory Data Analysis (EDA)</li>
+          <li>
+            Predictive model building using Logistic Regression, Random Forest,
+            and XGBoost
+          </li>
+          <li>
+            Evaluation through metrics like accuracy, precision, recall, and
+            ROC-AUC
+          </li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>📈 Business Benefits</h2>
+        <p>
+          The model can be seamlessly integrated into existing CRM systems to
+          generate real-time or batch predictions. This empowers telecom
+          companies to:
+        </p>
+        <ul>
+          <li>Minimize churn by targeting at-risk users</li>
+          <li>Enhance customer service by understanding pain points</li>
+          <li>Personalize marketing efforts to boost customer retention</li>
+          <li>
+            Improve Customer Lifetime Value (CLV) through data-driven decisions
+          </li>
+        </ul>
+      </section>
+      <section class="section">
+        <h2>🔍 Dataset Features Description</h2>
+        <p>
+          The dataset used in this project is a customer churn dataset from a
+          telecom company. It contains detailed information about individual
+          customer profiles, their service usage behavior, contract details, and
+          whether or not they have churned (i.e., discontinued the service). The
+          primary objective of analyzing this dataset is to understand the
+          factors that influence customer retention and churn, and to build
+          predictive models that can identify customers at risk of leaving the
+          company. Each row in the dataset represents a single customer and
+          their associated features. These features include both demographic
+          attributes such as whether the customer is a senior citizen or has
+          dependents, and service-related attributes such as internet service
+          type, online security subscription, and tech support availability.
+          Additionally, billing-related features like monthly charges and total
+          charges help analyze financial patterns in relation to churn behavior.
+          The target variable in this dataset is <b>Churn</b>, which is a binary
+          feature indicating whether the customer has left the service (Yes) or
+          not (No). Understanding this outcome in correlation with the other
+          features is crucial for developing effective customer retention
+          strategies.
+        </p>
+
+        <div style="overflow-x: auto; margin-top: 20px">
+          <table
+            style="
+              width: 100%;
+              border-collapse: collapse;
+              border: 1px solid #ccc;
+              font-family: Arial, sans-serif;
+              font-size: 15px;
+            "
+          >
+            <thead style="background-color: #007acc; color: white">
+              <tr>
+                <th
+                  style="
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    text-align: left;
+                  "
+                >
+                  Feature
+                </th>
+                <th
+                  style="
+                    padding: 12px;
+                    border: 1px solid #ccc;
+                    text-align: left;
+                  "
+                >
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>SeniorCitizen</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Indicates if the customer is a senior citizen (0: No, 1: Yes)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>Partner</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has a partner (Yes/No)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>Dependents</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has dependents (Yes/No)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>tenure</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Number of months the customer has stayed with the company
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>PhoneService</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has a phone service (Yes/No)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>MultipleLines</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has multiple phone lines (Yes/No/No phone
+                  service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>InternetService</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Type of internet service (DSL/Fiber optic/No)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>OnlineSecurity</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has online security add-on (Yes/No/No
+                  internet service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>OnlineBackup</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has online backup add-on (Yes/No/No
+                  internet service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>DeviceProtection</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has device protection (Yes/No/No internet
+                  service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>TechSupport</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer has technical support (Yes/No/No internet
+                  service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>StreamingTV</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer streams TV using the service (Yes/No/No
+                  internet service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>StreamingMovies</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer streams movies using the service
+                  (Yes/No/No internet service)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>Contract</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Type of contract (Month-to-month, One year, Two year)
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>MonthlyCharges</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  The amount charged to the customer monthly
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>TotalCharges</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  The total amount charged to the customer
+                </td>
+              </tr>
+              <tr>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  <code>Churn</code>
+                </td>
+                <td style="padding: 10px; border: 1px solid #ccc">
+                  Whether the customer churned (Yes/No) – this is the target
+                  variable
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer>© 2025 Telecom Churn Prediction Team | All rights reserved.</footer>
+  </body>
+</html>

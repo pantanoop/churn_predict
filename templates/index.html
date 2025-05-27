@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Churn Prediction</title>
+    <link rel="stylesheet" href="static/style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <span class="logo">Customer Churn Predict</span>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/analysis">Analysis</a></li>
+          <li><a href="/about">About Project</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h2>📊 Telecom Churn Prediction</h2>
+    <p class="tagline">
+      Know your customers before they leave. Predict churn with confidence.
+    </p>
+
+    <section class="hero-section">
+      <div class="image-container">
+        <img
+          src="static\banner1.png"
+          alt="Churn Analysis Banner"
+          class="hero-image"
+        />
+      </div>
+    </section>
+    <div class="hero-btn-wrapper">
+      <button id="show-form-btn" class="load-form-btn">
+        📝 Start Prediction
+      </button>
+    </div>
+
+    <div id="dynamic-content">
+      <p class="placeholder-text">Click "Start Prediction" to load the form.</p>
+    </div>
+
+    <div id="prediction-status" class="status-text"></div>
+
+    <section class="features">
+      <div class="feature">
+        <img src="static\ml.png" alt="ML" />
+        <h3>ML Powered</h3>
+        <p>Backed by machine learning for accurate predictions.</p>
+      </div>
+      <div class="feature">
+        <img src="static\data.png" alt="Data" />
+        <h3>Data-Driven</h3>
+        <p>Built on real telecom customer data.</p>
+      </div>
+      <div class="feature">
+        <img src="static\easy.png" alt="Easy" />
+        <h3>Easy to Use</h3>
+        <p>Intuitive interface for business users.</p>
+      </div>
+    </section>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

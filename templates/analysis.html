@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Model Analysis - Customer Churn Prediction</title>
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #f4f6f9;
+        color: #2c3e50;
+        padding-top: 80px;
+      }
+
+      .navbar {
+        width: 100%;
+        background-color: #007bff;
+        padding: 14px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .navbar-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        color: #fff;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 25px;
+      }
+
+      .nav-links li a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links li a:hover {
+        color: #e2e2e2;
+      }
+
+      h2,
+      h3 {
+        text-align: center;
+        color: #2c3e50;
+      }
+
+      h2 {
+        font-size: 32px;
+        margin: 30px 0;
+      }
+
+      h3 {
+        font-size: 24px;
+        margin-top: 40px;
+      }
+
+      .section {
+        max-width: 900px;
+        margin: 30px auto;
+        background: #ffffff;
+        padding: 25px 30px;
+        border-radius: 12px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .section p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      img {
+        display: block;
+        max-width: 95%;
+        height: auto;
+        margin: 25px auto;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      }
+
+      pre {
+        background: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #ddd;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        font-size: 14px;
+        line-height: 1.6;
+        width: 95%;
+        margin: 20px auto;
+        border-radius: 10px;
+        color: #333;
+      }
+
+      footer {
+        text-align: center;
+        padding: 40px 0;
+        color: #aaa;
+      }
+
+      @media (max-width: 600px) {
+        .nav-links {
+          flex-direction: column;
+          gap: 10px;
+        }
+
+        .section {
+          padding: 20px;
+          margin: 20px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <span class="logo">Customer Churn Predict</span>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/analysis">Analysis</a></li>
+          <li><a href="/about">About Project</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <h2>📊 Model Evaluation Analysis</h2>
+
+    <div class="section">
+      <h3>✅ Confusion Matrix</h3>
+      <img src="static/confusion_matrix.png" alt="Confusion Matrix" />
+      <p>
+        The confusion matrix above provides a detailed breakdown of the model's
+        performance.
+        <strong>794 customers</strong> who did not churn were correctly
+        identified (<em>True Negatives</em>), while
+        <strong>290 churning customers</strong> were correctly classified (<em
+          >True Positives</em
+        >). However, the model incorrectly classified
+        <strong>83 churning customers</strong> as non-churners (<em
+          >False Negatives</em
+        >), and <strong>242 non-churners</strong> were predicted to churn (<em
+          >False Positives</em
+        >). This gives insight into the model’s balance between precision and
+        recall.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>📈 ROC Curve</h3>
+      <img src="static/roc_curve.png" alt="ROC Curve" />
+      <p>
+        The ROC (Receiver Operating Characteristic) curve illustrates the
+        trade-off between sensitivity (true positive rate) and the false
+        positive rate across thresholds. An
+        <strong>AUC (Area Under Curve) score of 0.84</strong> shows strong model
+        performance, indicating it is good at distinguishing churners from
+        non-churners. The closer the AUC is to 1, the better the model.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>📊 Churn Distribution</h3>
+      <img src="static/churn_distribution.png" alt="Churn Distribution" />
+      <p>
+        This chart represents the overall churn distribution in the dataset.
+        About <strong>26.5% of customers</strong> have churned, while
+        <strong>73.5% have stayed</strong>. This class imbalance should be
+        considered when interpreting model performance. Evaluation metrics like
+        recall, precision, and AUC provide a more comprehensive picture than
+        accuracy alone.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>🧾 Classification Report</h3>
+      <p>
+        The classification report summarizes model performance on both churn (1)
+        and non-churn (0) classes. The model achieved an
+        <strong>accuracy of 77%</strong>. It performed well on the non-churn
+        class with <strong>precision of 91%</strong> and
+        <strong>F1-score of 0.83</strong>. For the churn class, precision is
+        lower at <strong>55%</strong>, but recall is relatively high at
+        <strong>78%</strong>, leading to an <strong>F1-score of 0.64</strong>.
+        This shows the model is effective in identifying churners despite class
+        imbalance.
+      </p>
+      <pre id="report"><em>Loading classification report...</em></pre>
+    </div>
+
+    <footer>&copy; 2025 Customer Churn Prediction</footer>
+
+    <script>
+      fetch("/static/classification_report.txt")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("report").innerText = data;
+        })
+        .catch((error) => {
+          document.getElementById("report").innerText = "Error loading report.";
+          console.error("Error fetching classification report:", error);
+        });
+    </script>
+  </body>
+</html>
